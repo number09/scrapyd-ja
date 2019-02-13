@@ -240,3 +240,8 @@ texinfo_documents = [
 
 # How to display URL addresses: 'footnote', 'no', or 'inline'.
 #texinfo_show_urls = 'footnote'
+
+# -- translate-ja ---------------------------------------------------------------
+locale_dirs = ['locale/']
+gettext_compact = False
+
