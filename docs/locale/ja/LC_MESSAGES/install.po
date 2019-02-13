@@ -1,0 +1,65 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2013-2017, Scrapy group
+# This file is distributed under the same license as the Scrapyd package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Scrapyd 1.2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-02-14 00:38+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../install.rst:4
+msgid "Installation"
+msgstr ""
+
+#: ../../install.rst:6
+msgid ""
+"This documents explains how to install and configure Scrapyd, to deploy "
+"and run your Scrapy spiders."
+msgstr ""
+
+#: ../../install.rst:10
+msgid "Requirements"
+msgstr ""
+
+#: ../../install.rst:12
+msgid ""
+"Scrapyd depends on the following libraries, but the installation process "
+"takes care of installing the missing ones:"
+msgstr ""
+
+#: ../../install.rst:15
+msgid "Python 2.7 or above"
+msgstr ""
+
+#: ../../install.rst:16
+msgid "Twisted 8.0 or above"
+msgstr ""
+
+#: ../../install.rst:17
+msgid "Scrapy 1.0 or above"
+msgstr ""
+
+#: ../../install.rst:18
+msgid "six"
+msgstr ""
+
+#: ../../install.rst:21
+msgid "Installing Scrapyd (generic way)"
+msgstr ""
+
+#: ../../install.rst:23
+msgid ""
+"How to install Scrapyd depends on the platform you're using. The generic "
+"way is to install it from PyPI::"
+msgstr ""
+

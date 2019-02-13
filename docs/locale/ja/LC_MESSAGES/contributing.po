@@ -1,0 +1,111 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2013-2017, Scrapy group
+# This file is distributed under the same license as the Scrapyd package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Scrapyd 1.2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-02-14 00:38+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../contributing.rst:4
+msgid "Contributing"
+msgstr ""
+
+#: ../../contributing.rst:8
+msgid ""
+"Read through the `Scrapy Contribution Docs`_ for tips relating to writing"
+" patches, reporting bugs, and project coding style"
+msgstr ""
+
+#: ../../contributing.rst:10
+msgid "These docs describe how to setup and contribute to Scrapyd."
+msgstr ""
+
+#: ../../contributing.rst:13
+msgid "Reporting Issues & Bugs"
+msgstr ""
+
+#: ../../contributing.rst:15
+msgid ""
+"Issues should be reported to the Scrapyd project `issue tracker`_ on "
+"GitHub"
+msgstr ""
+
+#: ../../contributing.rst:18
+msgid "Tests"
+msgstr ""
+
+#: ../../contributing.rst:20
+msgid ""
+"Tests are implemented using the `Twisted unit-testing framework`_. "
+"Scrapyd uses ``trial`` as the test running application."
+msgstr ""
+
+#: ../../contributing.rst:23
+msgid "Running tests"
+msgstr ""
+
+#: ../../contributing.rst:25
+msgid ""
+"To run all tests go to the root directory of the Scrapyd source code and "
+"run:"
+msgstr ""
+
+#: ../../contributing.rst:27
+msgid "``trial scrapyd``"
+msgstr ""
+
+#: ../../contributing.rst:29
+msgid "To run a specific test (say ``tests/test_poller.py``) use:"
+msgstr ""
+
+#: ../../contributing.rst:31
+msgid "``trial scrapyd.tests.test_poller``"
+msgstr ""
+
+#: ../../contributing.rst:35
+msgid "Writing tests"
+msgstr ""
+
+#: ../../contributing.rst:37
+msgid ""
+"All functionality (including new features and bug fixes) should include a"
+" test case to check that it works as expected, so please include tests "
+"for your patches if you want them to get accepted sooner."
+msgstr ""
+
+#: ../../contributing.rst:41
+msgid ""
+"Scrapyd uses unit-tests, which are located in the `scrapyd/tests`_ "
+"directory. Their module name typically resembles the full path of the "
+"module they're testing. For example, the scheduler code is in::"
+msgstr ""
+
+#: ../../contributing.rst:47
+msgid "And their unit-tests are in::"
+msgstr ""
+
+#: ../../contributing.rst:52
+msgid "Installing Locally"
+msgstr ""
+
+#: ../../contributing.rst:54
+msgid ""
+"To install a locally edited version of Scrapyd onto the system to use and"
+" test, inside the project root run:"
+msgstr ""
+
+#: ../../contributing.rst:56
+msgid "``pip install -e .``"
+msgstr ""
+

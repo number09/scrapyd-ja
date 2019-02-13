@@ -1,0 +1,234 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2013-2017, Scrapy group
+# This file is distributed under the same license as the Scrapyd package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Scrapyd 1.2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-02-14 00:38+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../api.rst:4
+msgid "API"
+msgstr ""
+
+#: ../../api.rst:6
+msgid ""
+"The following section describes the available resources in Scrapyd JSON "
+"API."
+msgstr ""
+
+#: ../../api.rst:9
+msgid "daemonstatus.json"
+msgstr ""
+
+#: ../../api.rst:11
+msgid "To check the load status of a service."
+msgstr ""
+
+#: ../../api.rst:13 ../../api.rst:114 ../../api.rst:131 ../../api.rst:149
+#: ../../api.rst:172
+msgid "Supported Request Methods: ``GET``"
+msgstr ""
+
+#: ../../api.rst:15 ../../api.rst:36 ../../api.rst:69 ../../api.rst:101
+#: ../../api.rst:117 ../../api.rst:136 ../../api.rst:155 ../../api.rst:177
+#: ../../api.rst:222 ../../api.rst:240
+msgid "Example request::"
+msgstr ""
+
+#: ../../api.rst:19 ../../api.rst:40 ../../api.rst:73 ../../api.rst:105
+#: ../../api.rst:121 ../../api.rst:140 ../../api.rst:159 ../../api.rst:181
+#: ../../api.rst:226 ../../api.rst:244
+msgid "Example response::"
+msgstr ""
+
+#: ../../api.rst:25
+msgid "addversion.json"
+msgstr ""
+
+#: ../../api.rst:27
+msgid "Add a version to a project, creating the project if it doesn't exist."
+msgstr ""
+
+#: ../../api.rst:29 ../../api.rst:59 ../../api.rst:95 ../../api.rst:216
+#: ../../api.rst:235
+msgid "Supported Request Methods: ``POST``"
+msgstr ""
+
+#: ../../api.rst:30 ../../api.rst:60 ../../api.rst:96 ../../api.rst:132
+#: ../../api.rst:150 ../../api.rst:173 ../../api.rst:217 ../../api.rst:236
+msgid "Parameters:"
+msgstr ""
+
+#: ../../api.rst:32 ../../api.rst:62 ../../api.rst:98 ../../api.rst:134
+#: ../../api.rst:152 ../../api.rst:219 ../../api.rst:238
+msgid "``project`` (string, required) - the project name"
+msgstr ""
+
+#: ../../api.rst:33 ../../api.rst:220
+msgid "``version`` (string, required) - the project version"
+msgstr ""
+
+#: ../../api.rst:34
+msgid "``egg`` (file, required) - a Python egg containing the project's code"
+msgstr ""
+
+#: ../../api.rst:44
+msgid ""
+"Scrapyd uses the `distutils LooseVersion`_ to interpret the version "
+"numbers you provide."
+msgstr ""
+
+#: ../../api.rst:46
+msgid ""
+"The latest version for a project will be used by default whenever "
+"necessary."
+msgstr ""
+
+#: ../../api.rst:48
+msgid ""
+"schedule.json_ and listspiders.json_ allow you to explicitly set the "
+"desired project version."
+msgstr ""
+
+#: ../../api.rst:55
+msgid "schedule.json"
+msgstr ""
+
+#: ../../api.rst:57
+msgid "Schedule a spider run (also known as a job), returning the job id."
+msgstr ""
+
+#: ../../api.rst:63
+msgid "``spider`` (string, required) - the spider name"
+msgstr ""
+
+#: ../../api.rst:64
+msgid ""
+"``setting`` (string, optional) - a Scrapy setting to use when running the"
+" spider"
+msgstr ""
+
+#: ../../api.rst:65
+msgid ""
+"``jobid`` (string, optional) - a job id used to identify the job, "
+"overrides the default generated UUID"
+msgstr ""
+
+#: ../../api.rst:66
+msgid "``_version`` (string, optional) - the version of the project to use"
+msgstr ""
+
+#: ../../api.rst:67
+msgid "any other parameter is passed as spider argument"
+msgstr ""
+
+#: ../../api.rst:77
+msgid ""
+"Example request passing a spider argument (``arg1``) and a setting "
+"(`DOWNLOAD_DELAY`_)::"
+msgstr ""
+
+#: ../../api.rst:82
+msgid ""
+"Spiders scheduled with scrapyd should allow for an arbitrary number of "
+"keyword arguments as scrapyd sends internally generated spider arguments "
+"to the spider being scheduled"
+msgstr ""
+
+#: ../../api.rst:88
+msgid "cancel.json"
+msgstr ""
+
+#: ../../api.rst:92
+msgid ""
+"Cancel a spider run (aka. job). If the job is pending, it will be "
+"removed. If the job is running, it will be terminated."
+msgstr ""
+
+#: ../../api.rst:99
+msgid "``job`` (string, required) - the job id"
+msgstr ""
+
+#: ../../api.rst:110
+msgid "listprojects.json"
+msgstr ""
+
+#: ../../api.rst:112
+msgid "Get the list of projects uploaded to this Scrapy server."
+msgstr ""
+
+#: ../../api.rst:115
+msgid "Parameters: none"
+msgstr ""
+
+#: ../../api.rst:126
+msgid "listversions.json"
+msgstr ""
+
+#: ../../api.rst:128
+msgid ""
+"Get the list of versions available for some project. The versions are "
+"returned in order, the last one is the currently used version."
+msgstr ""
+
+#: ../../api.rst:145
+msgid "listspiders.json"
+msgstr ""
+
+#: ../../api.rst:147
+msgid ""
+"Get the list of spiders available in the last (unless overridden) version"
+" of some project."
+msgstr ""
+
+#: ../../api.rst:153
+msgid "``_version`` (string, optional) - the version of the project to examine"
+msgstr ""
+
+#: ../../api.rst:166
+msgid "listjobs.json"
+msgstr ""
+
+#: ../../api.rst:170
+msgid "Get the list of pending, running and finished jobs of some project."
+msgstr ""
+
+#: ../../api.rst:175
+msgid "``project`` (string, option) - restrict results to project name"
+msgstr ""
+
+#: ../../api.rst:208
+msgid ""
+"All job data is kept in memory and will be reset when the Scrapyd service"
+" is restarted. See `issue 12`_."
+msgstr ""
+
+#: ../../api.rst:211
+msgid "delversion.json"
+msgstr ""
+
+#: ../../api.rst:213
+msgid ""
+"Delete a project version. If there are no more versions available for a "
+"given project, that project will be deleted too."
+msgstr ""
+
+#: ../../api.rst:231
+msgid "delproject.json"
+msgstr ""
+
+#: ../../api.rst:233
+msgid "Delete a project and all its uploaded versions."
+msgstr ""
+

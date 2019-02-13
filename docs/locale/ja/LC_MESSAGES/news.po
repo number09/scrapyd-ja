@@ -1,0 +1,407 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2013-2017, Scrapy group
+# This file is distributed under the same license as the Scrapyd package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Scrapyd 1.2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-02-14 00:38+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../news.rst:4
+msgid "Release notes"
+msgstr ""
+
+#: ../../news.rst:7
+msgid "1.3.0"
+msgstr ""
+
+#: ../../news.rst:8
+msgid "*Unreleased*"
+msgstr ""
+
+#: ../../news.rst:11 ../../news.rst:43 ../../news.rst:94
+msgid "Added"
+msgstr ""
+
+#: ../../news.rst:13
+msgid "Jobs website shortcut to cancel a job using the cancel.json webservice."
+msgstr ""
+
+#: ../../news.rst:14
+msgid ""
+"Make project argument to listjobs.json optional, so that we can easily "
+"query for all jobs."
+msgstr ""
+
+#: ../../news.rst:18 ../../news.rst:60 ../../news.rst:77
+msgid "Removed"
+msgstr ""
+
+#: ../../news.rst:20
+msgid ""
+"Doc for ubunut installs removed. Scrapinghub no longer maintains ubuntu "
+"repo."
+msgstr ""
+
+#: ../../news.rst:23
+msgid "1.2.0"
+msgstr ""
+
+#: ../../news.rst:24
+msgid "*Release date: 2017-04-12*"
+msgstr ""
+
+#: ../../news.rst:26
+msgid "The highlight of this release is the long-awaited Python 3 support."
+msgstr ""
+
+#: ../../news.rst:28
+msgid ""
+"The new scrapy requirement is version 1.0 or higher. Python 2.6 is no "
+"longer supported by scrapyd."
+msgstr ""
+
+#: ../../news.rst:31
+msgid ""
+"Some unused sqlite utilities are now deprecated and will be removed from "
+"a later scrapyd release. Instantiating them or subclassing from them will"
+" trigger a deprecation warning. These are located under "
+"``scrapyd.sqlite``:"
+msgstr ""
+
+#: ../../news.rst:37
+msgid "SqliteDict"
+msgstr ""
+
+#: ../../news.rst:38
+msgid "SqlitePickleDict"
+msgstr ""
+
+#: ../../news.rst:39
+msgid "SqlitePriorityQueue"
+msgstr ""
+
+#: ../../news.rst:40
+msgid "PickleSqlitePriorityQueue"
+msgstr ""
+
+#: ../../news.rst:45
+msgid "Include run's PID in listjobs webservice."
+msgstr ""
+
+#: ../../news.rst:46
+msgid ""
+"Include full tracebacks from scrapy when failing to get spider list. This"
+" will lead to more noisy webservice output but will make debugging "
+"deployment problems much easier."
+msgstr ""
+
+#: ../../news.rst:49
+msgid "Include start/finish time in daemon's joblist page"
+msgstr ""
+
+#: ../../news.rst:50
+msgid "Twisted 16 compatibility"
+msgstr ""
+
+#: ../../news.rst:51
+msgid "Python 3 compatibility"
+msgstr ""
+
+#: ../../news.rst:52
+msgid "Make console script executable"
+msgstr ""
+
+#: ../../news.rst:53
+msgid "Project version argument in the schedule webservice"
+msgstr ""
+
+#: ../../news.rst:54
+msgid "Configuration option for website root class"
+msgstr ""
+
+#: ../../news.rst:55
+msgid "Optional jobid argument to schedule webservice"
+msgstr ""
+
+#: ../../news.rst:56
+msgid "Contribution documentation"
+msgstr ""
+
+#: ../../news.rst:57
+msgid "Daemon status webservice"
+msgstr ""
+
+#: ../../news.rst:62
+msgid ""
+"scrapyd's bind_address now defaults to 127.0.0.1 instead of 0.0.0.0 to "
+"listen only for connection from the local host"
+msgstr ""
+
+#: ../../news.rst:64
+msgid "scrapy < 1.0 compatibility"
+msgstr ""
+
+#: ../../news.rst:65
+msgid "python < 2.7 compatibility"
+msgstr ""
+
+#: ../../news.rst:68 ../../news.rst:83
+msgid "Fixed"
+msgstr ""
+
+#: ../../news.rst:70
+msgid "Poller race condition for concurrently accessed queues"
+msgstr ""
+
+#: ../../news.rst:73
+msgid "1.1.1"
+msgstr ""
+
+#: ../../news.rst:74
+msgid "*Release date: 2016-11-03*"
+msgstr ""
+
+#: ../../news.rst:79
+msgid ""
+"Disabled bdist_wheel command in setup to define dynamic requirements "
+"despite of pip-7 wheel caching bug."
+msgstr ""
+
+#: ../../news.rst:85
+msgid ""
+"Use correct type adapter for sqlite3 blobs. In some systems, a wrong type"
+" adapter leads to incorrect buffer reads/writes."
+msgstr ""
+
+#: ../../news.rst:87
+msgid "FEED_URI was always overridden by scrapyd"
+msgstr ""
+
+#: ../../news.rst:88 ../../news.rst:156
+msgid "Specified maximum versions for requirements that became incompatible."
+msgstr ""
+
+#: ../../news.rst:89 ../../news.rst:157
+msgid "Marked package as zip-unsafe because twistd requires a plain ``txapp.py``"
+msgstr ""
+
+#: ../../news.rst:90
+msgid ""
+"Don't install zipped scrapy in py26 CI env because its setup doesn't "
+"include the ``scrapy/VERSION`` file."
+msgstr ""
+
+#: ../../news.rst:96
+msgid "Enabled some missing tests for the sqlite queues."
+msgstr ""
+
+#: ../../news.rst:97
+msgid ""
+"Enabled CI tests for python2.6 because it was supported by the 1.1 "
+"release."
+msgstr ""
+
+#: ../../news.rst:98
+msgid "Document missing config options and include in default_scrapyd.conf"
+msgstr ""
+
+#: ../../news.rst:99
+msgid "Note the spider queue's ``priority`` argument in the scheduler's doc."
+msgstr ""
+
+#: ../../news.rst:103
+msgid "1.1.0"
+msgstr ""
+
+#: ../../news.rst:104
+msgid "*Release date: 2015-06-29*"
+msgstr ""
+
+#: ../../news.rst:107
+msgid "Features & Enhancements"
+msgstr ""
+
+#: ../../news.rst:109
+msgid ""
+"Outsource scrapyd-deploy command to scrapyd-client (c1358dc, "
+"c9d66ca..191353e) **If you rely on this command, install the scrapyd-"
+"client package from pypi.**"
+msgstr ""
+
+#: ../../news.rst:111
+msgid "Look for a ``~/.scrapyd.conf`` file in the users home (1fce99b)"
+msgstr ""
+
+#: ../../news.rst:112
+msgid ""
+"Adding the nodename to identify the process that is working on the job "
+"(fac3a5c..4aebe1c)"
+msgstr ""
+
+#: ../../news.rst:113
+msgid "Allow remote items store (e261591..35a21db)"
+msgstr ""
+
+#: ../../news.rst:114
+msgid "Debian sysvinit script (a54193a, ff457a9)"
+msgstr ""
+
+#: ../../news.rst:115
+msgid "Add 'start_time' field in webservice for running jobs (6712af9, acd460b)"
+msgstr ""
+
+#: ../../news.rst:116
+msgid ""
+"Check if a spider exists before schedule it (with sqlite cache) (#8, "
+"288afef..a185ff2)"
+msgstr ""
+
+#: ../../news.rst:119
+msgid "Bugfixes"
+msgstr ""
+
+#: ../../news.rst:121
+msgid ""
+"F̶i̶x̶ ̶s̶c̶r̶a̶p̶y̶d̶-̶d̶e̶p̶l̶o̶y̶ ̶-̶-̶l̶i̶s̶t̶-̶p̶r̶o̶j̶e̶c̶t̶s̶ "
+"̶(̶9̶4̶2̶a̶1̶b̶2̶)̶ → moved to scrapyd-client"
+msgstr ""
+
+#: ../../news.rst:122
+msgid "Sanitize version names when creating egg paths (8023720)"
+msgstr ""
+
+#: ../../news.rst:123
+msgid "Copy txweb/JsonResource from scrapy which no longer provides it (99ea920)"
+msgstr ""
+
+#: ../../news.rst:124
+msgid "Use w3lib to generate correct feed uris (9a88ea5)"
+msgstr ""
+
+#: ../../news.rst:125
+msgid "Fix GIT versioning for projects without annotated tags (e91dcf4 #34)"
+msgstr ""
+
+#: ../../news.rst:126
+msgid "Correcting HTML tags in scrapyd website monitor (da5664f, 26089cd)"
+msgstr ""
+
+#: ../../news.rst:127
+msgid "Fix FEED_URI path on windows (4f0060a)"
+msgstr ""
+
+#: ../../news.rst:130
+msgid "Setup script and Tests/CI"
+msgstr ""
+
+#: ../../news.rst:132
+msgid "Restore integration test script (66de25d)"
+msgstr ""
+
+#: ../../news.rst:133
+msgid "Changed scripts to be installed using entry_points (b670f5e)"
+msgstr ""
+
+#: ../../news.rst:134
+msgid "Renovate scrapy upstart job (d130770)"
+msgstr ""
+
+#: ../../news.rst:135
+msgid "Travis.yml: remove deprecated ``--use-mirros`` pip option (b3cdc61)"
+msgstr ""
+
+#: ../../news.rst:136
+msgid ""
+"Mark package as zip unsafe because twistd requires a plain ``txapp.py`` "
+"(f27c054)"
+msgstr ""
+
+#: ../../news.rst:137
+msgid "Removed python 2.6/lucid env from travis (5277755)"
+msgstr ""
+
+#: ../../news.rst:138
+msgid "Made Scrapyd package name lowercase (1adfc31)"
+msgstr ""
+
+#: ../../news.rst:141
+msgid "Documentation"
+msgstr ""
+
+#: ../../news.rst:143
+msgid "Spiders should allow for arbitrary keyword arguments (696154)"
+msgstr ""
+
+#: ../../news.rst:144
+msgid "Various typos (51f1d69, 0a4a77a)"
+msgstr ""
+
+#: ../../news.rst:145
+msgid "Fix release notes: 1.0 is already released (6c8dcfb)"
+msgstr ""
+
+#: ../../news.rst:146
+msgid "Point website module's links to readthedocs (215c700)"
+msgstr ""
+
+#: ../../news.rst:147
+msgid "Remove reference to 'scrapy server' command (f599b60)"
+msgstr ""
+
+#: ../../news.rst:150
+msgid "1.0.2"
+msgstr ""
+
+#: ../../news.rst:151
+msgid "*Release date: 2016-03-28*"
+msgstr ""
+
+#: ../../news.rst:154
+msgid "setup script"
+msgstr ""
+
+#: ../../news.rst:160
+msgid "documentation"
+msgstr ""
+
+#: ../../news.rst:162
+msgid "Updated broken links, references to wrong versions and scrapy"
+msgstr ""
+
+#: ../../news.rst:163
+msgid "Warn that scrapyd 1.0 felling out of support"
+msgstr ""
+
+#: ../../news.rst:166
+msgid "1.0.1"
+msgstr ""
+
+#: ../../news.rst:167
+msgid "*Release date: 2013-09-02* *Trivial update*"
+msgstr ""
+
+#: ../../news.rst:171
+msgid "1.0.0"
+msgstr ""
+
+#: ../../news.rst:172
+msgid "*Release date: 2013-09-02*"
+msgstr ""
+
+#: ../../news.rst:174
+msgid ""
+"First standalone release (it was previously shipped with Scrapy until "
+"Scrapy 0.16)."
+msgstr ""
+
