@@ -244,4 +244,4 @@ texinfo_documents = [
 # -- translate-ja ---------------------------------------------------------------
 locale_dirs = ['locale/']
 gettext_compact = False
-
+language = 'ja'
