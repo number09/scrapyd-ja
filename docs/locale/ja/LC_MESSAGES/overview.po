@@ -31,6 +31,9 @@ msgid ""
 "versions uploaded, but only the latest one will be used for launching new"
 " spiders."
 msgstr ""
+"Scrapydは複数のプロジェクトを管理することができ、各プロジェクトはアップロードされた複数のバージョンを持つことができますが、"
+"新しいspiderを起動する際には、最新のもののみが使用されます。"
+
 
 #: ../../overview.rst:12
 msgid ""
@@ -40,6 +43,8 @@ msgid ""
 "alphabetically but using a smarter algorithm (the same `distutils`_ uses)"
 " so ``r10`` compares greater to ``r9``, for example."
 msgstr ""
+"バージョン名の一般的（かつ便利）な慣習は、"
+"あなたのScrapyプロジェクトのコードを追跡するのに使用している、バージョン管理ツールのリビジョン番号です。"
 
 #: ../../overview.rst:19
 msgid "How Scrapyd works"
