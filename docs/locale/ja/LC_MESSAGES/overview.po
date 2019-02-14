@@ -19,11 +19,11 @@ msgstr ""
 
 #: ../../overview.rst:3
 msgid "Overview"
-msgstr ""
+msgstr "概要"
 
 #: ../../overview.rst:6
 msgid "Projects and versions"
-msgstr ""
+msgstr "プロジェクトとバージョン"
 
 #: ../../overview.rst:8
 msgid ""
@@ -50,7 +50,7 @@ msgstr ""
 
 #: ../../overview.rst:19
 msgid "How Scrapyd works"
-msgstr ""
+msgstr "どのようにScrapydが動作するか"
 
 #: ../../overview.rst:21
 msgid ""
@@ -97,7 +97,7 @@ msgstr ""
 
 #: ../../overview.rst:42
 msgid "Starting Scrapyd"
-msgstr ""
+msgstr "Scrapydを開始する"
 
 #: ../../overview.rst:44
 msgid ""
@@ -113,7 +113,7 @@ msgstr ""
 
 #: ../../overview.rst:52
 msgid "Scheduling a spider run"
-msgstr ""
+msgstr "spiderの実行をスケジューリングする"
 
 #: ../../overview.rst:54
 msgid "To schedule a spider run::"
@@ -127,7 +127,7 @@ msgstr ""
 
 #: ../../overview.rst:64
 msgid "Web Interface"
-msgstr ""
+msgstr "Webインターフェース"
 
 #: ../../overview.rst:66
 msgid ""
