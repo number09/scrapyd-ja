@@ -45,6 +45,8 @@ msgid ""
 msgstr ""
 "バージョン名の一般的（かつ便利）な慣習は、"
 "あなたのScrapyプロジェクトのコードを追跡するのに使用している、バージョン管理ツールのリビジョン番号です。"
+"例: ``r23``  バージョンはアルファベット順で比較されるのではなく、( `distutils`_ が使用するのと同じ）"
+"よりスマートなアルゴリズムを使用する為、例えば ``r10`` は ``r9`` より大きくなります。"
 
 #: ../../overview.rst:19
 msgid "How Scrapyd works"
@@ -56,6 +58,8 @@ msgid ""
 "requests for spiders to run and spawns a process for each one, which "
 "basically executes::"
 msgstr ""
+"Scrapydは（一般的にデーモンとして実行する）アプリケーションであり、"
+"spiderの実行要求を待ち受け、実行するプロセスを生成します。"
 
 #: ../../overview.rst:27
 msgid ""
@@ -64,6 +68,9 @@ msgid ""
 ":ref:`max_proc_per_cpu` options, starting as many processes as possible "
 "to handle the load."
 msgstr ""
+"また、Scrapydは、処理を行うためにできるだけ多くのプロセスを開始し、"
+":ref:`max_proc` と :ref:`max_proc_per_cpu` オプションで指定された"
+"固定数のスロットに割り当てを行い、複数のプロセスを並列に実行します。"
 
 #: ../../overview.rst:31
 msgid ""
@@ -74,12 +81,19 @@ msgid ""
 "and can be changed, if you're familiar with the `Twisted Application "
 "Framework`_ which Scrapyd is implemented in."
 msgstr ""
+"プロセスの割り当てや管理の他、Scrapydは(egg形式の)新しいプロジェクト・バージョンを"
+"アップロードしたり、spiderをスケジューリングするための :ref:`JSON web service <api>` を"
+"提供します。"
+"この機能はオプションであり、もしScrapydをカスタマイズしたい場合、この機能は無効化することが出来ます。"
+"もしScrapydを実装している `Twisted Application Framework`_ にあなたが精通しているのであれば、"
+"コンポーネントはプラガブルであり変更可能です。"
 
 #: ../../overview.rst:38
 msgid ""
 "Starting from 0.11, Scrapyd also provides a minimal :ref:`web interface "
 "<webui>`."
 msgstr ""
+"バージョン0.11より、Scrapydは最小限の :ref:`web interface <webui>` も提供しています。"
 
 #: ../../overview.rst:42
 msgid "Starting Scrapyd"
@@ -90,10 +104,12 @@ msgid ""
 "To start the service, use the ``scrapyd`` command provided in the Scrapy "
 "distribution::"
 msgstr ""
+"サービスを開始するには、Scrapyディストリビューションで提供されている ``scrapyd`` コマンドを使用します。"
 
 #: ../../overview.rst:49
 msgid "That should get your Scrapyd started."
 msgstr ""
+"これでScrapydが起動します。"
 
 #: ../../overview.rst:52
 msgid "Scheduling a spider run"
@@ -102,10 +118,12 @@ msgstr ""
 #: ../../overview.rst:54
 msgid "To schedule a spider run::"
 msgstr ""
+"spiderの実行をスケジューリングします。"
 
 #: ../../overview.rst:59
 msgid "For more resources see: :ref:`api` for more available resources."
 msgstr ""
+"より多くの使用可能なリソースについては、 :ref:`api` を参照してください。"
 
 #: ../../overview.rst:64
 msgid "Web Interface"
@@ -117,4 +135,5 @@ msgid ""
 "processes and accessing logs) which can be accessed at "
 "http://localhost:6800/"
 msgstr ""
-
+"Scrapydには(プロセスの実行やアクセスログを監視するための)最小限のwebインターフェースが付属しており、"
+"http://localhost:6800/ からアクセスすることができます。"
