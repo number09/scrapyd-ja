@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../deploy.rst:4
 msgid "Deploying your project"
-msgstr ""
+msgstr "プロジェクトのデプロイ"
 
 #: ../../deploy.rst:6
 msgid ""
@@ -31,4 +31,10 @@ msgid ""
 "<https://github.com/scrapy/scrapyd-client>`_ which will do it all for "
 "you."
 msgstr ""
+"プロジェクトをデプロイするには、プロジェクトをegg化し、"
+" `addversion.json <https://scrapyd.readthedocs.org/en/latest/api.html#addversion-json>`_ エンドポイントを"
+"経由して、Scrapydにアップロードする必要があります。"
+"これは手動で行うこともできますが、最も簡単な方法は"
+" `scrapyd-client <https://github.com/scrapy/scrapyd-client>`_ によって提供される"
+" `scrapyd-deploy` ツールを使用する方法で、このツールは全てを行ってくれます。"
 
