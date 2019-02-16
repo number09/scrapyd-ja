@@ -19,35 +19,38 @@ msgstr ""
 
 #: ../../install.rst:4
 msgid "Installation"
-msgstr ""
+msgstr "インストール"
 
 #: ../../install.rst:6
 msgid ""
 "This documents explains how to install and configure Scrapyd, to deploy "
 "and run your Scrapy spiders."
 msgstr ""
+"このドキュメントはScrapy spiderをデプロイし実行するために、Scrapydのインストールと設定方法を説明しています。"
 
 #: ../../install.rst:10
 msgid "Requirements"
-msgstr ""
+msgstr "インストール要件"
 
 #: ../../install.rst:12
 msgid ""
 "Scrapyd depends on the following libraries, but the installation process "
 "takes care of installing the missing ones:"
 msgstr ""
+"Scrapydは以下のライブラリに依存しています。インストールプロセスは、不足しているライブラリを"
+"インストールします。"
 
 #: ../../install.rst:15
 msgid "Python 2.7 or above"
-msgstr ""
+msgstr "Python 2.7 以降"
 
 #: ../../install.rst:16
 msgid "Twisted 8.0 or above"
-msgstr ""
+msgstr "Twisted 8.0 以降"
 
 #: ../../install.rst:17
 msgid "Scrapy 1.0 or above"
-msgstr ""
+msgstr "Scrapy 1.0 以降"
 
 #: ../../install.rst:18
 msgid "six"
@@ -55,11 +58,13 @@ msgstr ""
 
 #: ../../install.rst:21
 msgid "Installing Scrapyd (generic way)"
-msgstr ""
+msgstr "Scrapydのインストール（一般的な方法）"
 
 #: ../../install.rst:23
 msgid ""
 "How to install Scrapyd depends on the platform you're using. The generic "
 "way is to install it from PyPI::"
 msgstr ""
+"Scrapydのインストール方法は、使用しているプラットフォームに依存します。"
+"一般的なインストール方法は、PyPIからのインストールです。"
 
