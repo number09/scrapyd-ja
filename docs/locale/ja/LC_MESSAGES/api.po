@@ -26,6 +26,7 @@ msgid ""
 "The following section describes the available resources in Scrapyd JSON "
 "API."
 msgstr ""
+"以下のセクションでは、Scrapyd JSON APIで使用可能なリソースについて説明します。"
 
 #: ../../api.rst:9
 msgid "daemonstatus.json"
@@ -33,24 +34,24 @@ msgstr ""
 
 #: ../../api.rst:11
 msgid "To check the load status of a service."
-msgstr ""
+msgstr "サービスの状態を確認します。"
 
 #: ../../api.rst:13 ../../api.rst:114 ../../api.rst:131 ../../api.rst:149
 #: ../../api.rst:172
 msgid "Supported Request Methods: ``GET``"
-msgstr ""
+msgstr "サポートされるリクエストメソッド: ``GET``"
 
 #: ../../api.rst:15 ../../api.rst:36 ../../api.rst:69 ../../api.rst:101
 #: ../../api.rst:117 ../../api.rst:136 ../../api.rst:155 ../../api.rst:177
 #: ../../api.rst:222 ../../api.rst:240
 msgid "Example request::"
-msgstr ""
+msgstr "リクエストの例::"
 
 #: ../../api.rst:19 ../../api.rst:40 ../../api.rst:73 ../../api.rst:105
 #: ../../api.rst:121 ../../api.rst:140 ../../api.rst:159 ../../api.rst:181
 #: ../../api.rst:226 ../../api.rst:244
 msgid "Example response::"
-msgstr ""
+msgstr "レスポンスの例::"
 
 #: ../../api.rst:25
 msgid "addversion.json"
@@ -58,48 +59,51 @@ msgstr ""
 
 #: ../../api.rst:27
 msgid "Add a version to a project, creating the project if it doesn't exist."
-msgstr ""
+msgstr "プロジェクトにバージョンを追加します。プロジェクトが無い場合はプロジェクトを作成します。"
 
 #: ../../api.rst:29 ../../api.rst:59 ../../api.rst:95 ../../api.rst:216
 #: ../../api.rst:235
 msgid "Supported Request Methods: ``POST``"
-msgstr ""
+msgstr "サポートされるリクエストメソッド: ``POST``"
 
 #: ../../api.rst:30 ../../api.rst:60 ../../api.rst:96 ../../api.rst:132
 #: ../../api.rst:150 ../../api.rst:173 ../../api.rst:217 ../../api.rst:236
 msgid "Parameters:"
-msgstr ""
+msgstr "引数:"
 
 #: ../../api.rst:32 ../../api.rst:62 ../../api.rst:98 ../../api.rst:134
 #: ../../api.rst:152 ../../api.rst:219 ../../api.rst:238
 msgid "``project`` (string, required) - the project name"
-msgstr ""
+msgstr "``project`` （string, 必須） - プロジェクト名"
 
 #: ../../api.rst:33 ../../api.rst:220
 msgid "``version`` (string, required) - the project version"
-msgstr ""
+msgstr "``version`` （string, 必須） - バージョン名"
 
 #: ../../api.rst:34
 msgid "``egg`` (file, required) - a Python egg containing the project's code"
-msgstr ""
+msgstr "``egg`` (file, 必須) - プロジェクトのコードを含んだPython eggファイル"
 
 #: ../../api.rst:44
 msgid ""
 "Scrapyd uses the `distutils LooseVersion`_ to interpret the version "
 "numbers you provide."
 msgstr ""
+"Scrapydはバージョン番号を解釈する為に `distutils LooseVersion`_ を使用します。"
 
 #: ../../api.rst:46
 msgid ""
 "The latest version for a project will be used by default whenever "
 "necessary."
 msgstr ""
+"デフォルトでプロジェクトの最新バージョンが、必要に応じて使用されます。"
 
 #: ../../api.rst:48
 msgid ""
 "schedule.json_ and listspiders.json_ allow you to explicitly set the "
 "desired project version."
 msgstr ""
+"schedule.json_ と listspiders.json_ は、要求するプロジェクトのバージョンを明示的に指定できます。"
 
 #: ../../api.rst:55
 msgid "schedule.json"
