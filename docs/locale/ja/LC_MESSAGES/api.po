@@ -111,37 +111,40 @@ msgstr ""
 
 #: ../../api.rst:57
 msgid "Schedule a spider run (also known as a job), returning the job id."
-msgstr ""
+msgstr "spiderの実行(jobとも呼ばれる)をスケジュールし、job idを返します。"
 
 #: ../../api.rst:63
 msgid "``spider`` (string, required) - the spider name"
-msgstr ""
+msgstr "``spider`` (string, 必須) - spiderの名前"
 
 #: ../../api.rst:64
 msgid ""
 "``setting`` (string, optional) - a Scrapy setting to use when running the"
 " spider"
 msgstr ""
+"``setting`` (string, 任意) - spiderを実行する時に使用するScrapy setting"
 
 #: ../../api.rst:65
 msgid ""
 "``jobid`` (string, optional) - a job id used to identify the job, "
 "overrides the default generated UUID"
 msgstr ""
+"``jobid`` (string, 任意) - jobを識別するjob id。デフォルトで生成されたUUIDをオーバーライドします。"
 
 #: ../../api.rst:66
 msgid "``_version`` (string, optional) - the version of the project to use"
-msgstr ""
+msgstr "``_version`` (string, 任意) - 使用するプロジェクトのバージョン"
 
 #: ../../api.rst:67
 msgid "any other parameter is passed as spider argument"
-msgstr ""
+msgstr "その他の引数はspiderの引数として渡されます。"
 
 #: ../../api.rst:77
 msgid ""
 "Example request passing a spider argument (``arg1``) and a setting "
 "(`DOWNLOAD_DELAY`_)::"
 msgstr ""
+"リクエスト例は、spiderの引数(``arg1``)とsetting (`DOWNLOAD_DELAY`_):: を渡しています。"
 
 #: ../../api.rst:82
 msgid ""
