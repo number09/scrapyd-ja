@@ -162,10 +162,12 @@ msgid ""
 "Cancel a spider run (aka. job). If the job is pending, it will be "
 "removed. If the job is running, it will be terminated."
 msgstr ""
+"spiderの実行(jobとも呼ばれる)をキャンセルします。ジョブが保留中の場合、ジョブは削除されます。"
+"ジョブが実行中の場合、ジョブは中断されます。"
 
 #: ../../api.rst:99
 msgid "``job`` (string, required) - the job id"
-msgstr ""
+msgstr "``job`` (string, 必須) job id"
 
 #: ../../api.rst:110
 msgid "listprojects.json"
