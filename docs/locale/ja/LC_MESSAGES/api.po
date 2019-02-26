@@ -175,11 +175,11 @@ msgstr ""
 
 #: ../../api.rst:112
 msgid "Get the list of projects uploaded to this Scrapy server."
-msgstr ""
+msgstr "このScrapyサーバにアップロードされたプロジェクトのリストを取得します。"
 
 #: ../../api.rst:115
 msgid "Parameters: none"
-msgstr ""
+msgstr "引数: 無し"
 
 #: ../../api.rst:126
 msgid "listversions.json"
@@ -190,6 +190,8 @@ msgid ""
 "Get the list of versions available for some project. The versions are "
 "returned in order, the last one is the currently used version."
 msgstr ""
+"任意のプロジェクトの利用可能なバージョンを取得します。"
+"バージョンは現在使用しているバージョンが最後となる順番で返されます。"
 
 #: ../../api.rst:145
 msgid "listspiders.json"
@@ -200,10 +202,11 @@ msgid ""
 "Get the list of spiders available in the last (unless overridden) version"
 " of some project."
 msgstr ""
+"任意のプロジェクトの実行可能なspiderの最新バージョン（上書きされていない場合）のリストを取得します。"
 
 #: ../../api.rst:153
 msgid "``_version`` (string, optional) - the version of the project to examine"
-msgstr ""
+msgstr "``_version`` (string, 任意) - 対象プロジェクトのバージョン"
 
 #: ../../api.rst:166
 msgid "listjobs.json"
@@ -211,17 +214,19 @@ msgstr ""
 
 #: ../../api.rst:170
 msgid "Get the list of pending, running and finished jobs of some project."
-msgstr ""
+msgstr "任意のプロジェクトの保留中、実行中、完了済みジョブのリストを取得します。"
 
 #: ../../api.rst:175
 msgid "``project`` (string, option) - restrict results to project name"
-msgstr ""
+msgstr "出力結果を指定したプロジェクトのジョブに限定します。"
 
 #: ../../api.rst:208
 msgid ""
 "All job data is kept in memory and will be reset when the Scrapyd service"
 " is restarted. See `issue 12`_."
 msgstr ""
+"全てのジョブの情報はメモリに保持され、Scrapydサービスが再起動された時にリセットされます。"
+"`issue 12`_ を参照してください。"
 
 #: ../../api.rst:211
 msgid "delversion.json"
@@ -232,6 +237,8 @@ msgid ""
 "Delete a project version. If there are no more versions available for a "
 "given project, that project will be deleted too."
 msgstr ""
+"プロジェクトのバージョンを削除します。"
+"指定されたプロジェクトの実行可能なバージョンが無くなる場合、プロジェクトも削除されます。"
 
 #: ../../api.rst:231
 msgid "delproject.json"
@@ -239,5 +246,5 @@ msgstr ""
 
 #: ../../api.rst:233
 msgid "Delete a project and all its uploaded versions."
-msgstr ""
+msgstr "全てのアップロードされたバージョンを含め、プロジェクトを削除します。"
 
