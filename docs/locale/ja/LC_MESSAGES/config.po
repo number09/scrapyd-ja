@@ -26,6 +26,8 @@ msgid ""
 "Scrapyd searches for configuration files in the following locations, and "
 "parses them in order with the latest one taking more priority:"
 msgstr ""
+"Scrapydは以下の場所から設定ファイルを探します。"
+"最新の設定ファイルを優先的に適用します。"
 
 #: ../../config.rst:9
 msgid "``/etc/scrapyd/scrapyd.conf`` (Unix)"
@@ -37,7 +39,7 @@ msgstr ""
 
 #: ../../config.rst:11
 msgid "``/etc/scrapyd/conf.d/*`` (in alphabetical order, Unix)"
-msgstr ""
+msgstr "``/etc/scrapyd/conf.d/*`` (アルファベット順, Unix)"
 
 #: ../../config.rst:12
 msgid "``scrapyd.conf``"
@@ -45,13 +47,15 @@ msgstr ""
 
 #: ../../config.rst:13
 msgid "``~/.scrapyd.conf`` (users home directory)"
-msgstr ""
+msgstr "``~/.scrapyd.conf`` (ユーザのホームディレクトリ)"
 
 #: ../../config.rst:15
 msgid ""
 "The configuration file supports the following options (see default values"
 " in the :ref:`example <config-example>`)."
 msgstr ""
+"設定ファイルは以下のオプションをサポートします。"
+"デフォルト値は :ref:`例 <config-example>` を参照してください。"
 
 #: ../../config.rst:19
 msgid "http_port"
@@ -59,7 +63,7 @@ msgstr ""
 
 #: ../../config.rst:21
 msgid "The TCP port where the HTTP JSON API will listen. Defaults to ``6800``."
-msgstr ""
+msgstr "HTTP JSON APIが使用するTCPポートです。 デフォルトは ``6800`` です。"
 
 #: ../../config.rst:24
 msgid "bind_address"
@@ -70,6 +74,8 @@ msgid ""
 "The IP address where the website and json webservices will listen. "
 "Defaults to ``127.0.0.1`` (localhost)"
 msgstr ""
+"WEBサイトとjson WEBサービスが使用するIPアドレスです。"
+"デフォルトは ``127.0.0.1`` (localhost) です"
 
 #: ../../config.rst:32
 msgid "max_proc"
@@ -82,6 +88,9 @@ msgid ""
 "multiplied by the value in ``max_proc_per_cpu`` option. Defaults to "
 "``0``."
 msgstr ""
+"同時に実行されるScrapyプロセスの最大数です。"
+"未指定もしくは ``0`` を指定した場合、システムで使用可能なCPU数に"
+" ``max_proc_per_cpu`` の値を掛けた値を使用します。デフォルトは ``0`` です。"
 
 #: ../../config.rst:41
 msgid "max_proc_per_cpu"
@@ -92,6 +101,8 @@ msgid ""
 "The maximum number of concurrent Scrapy process that will be started per "
 "cpu. Defaults to ``4``."
 msgstr ""
+"CPU辺りの同時に実行されるScrapyプロセスの最大数です。"
+"デフォルトは ``4`` です。"
 
 #: ../../config.rst:47
 msgid "debug"
@@ -103,6 +114,11 @@ msgid ""
 "enabled the full Python traceback will be returned (as plain text "
 "responses) when there is an error processing a JSON API call."
 msgstr ""
+"デバッグモードが有効かどうかを指定します。デフォルトは ``off`` です。"
+"デバッグモードを有効にすると、JSON API呼び出しの処理中にエラーが発生した時に、"
+"完全なPythonトレースバックが(プレーンテキストのレスポンスで)返されます。"
+
+
 
 #: ../../config.rst:54
 msgid "eggs_dir"
@@ -110,7 +126,7 @@ msgstr ""
 
 #: ../../config.rst:56
 msgid "The directory where the project eggs will be stored."
-msgstr ""
+msgstr "プロジェクtのeggファイルが格納されるディレクトリです。"
 
 #: ../../config.rst:59
 msgid "dbs_dir"
@@ -121,6 +137,8 @@ msgid ""
 "The directory where the project databases will be stored (this includes "
 "the spider queues)."
 msgstr ""
+"プロジェクトのデータベースが格納されるディレクトリです。"
+"(spiderのキューを含みます)"
 
 #: ../../config.rst:65
 msgid "logs_dir"
@@ -131,6 +149,8 @@ msgid ""
 "The directory where the Scrapy logs will be stored. If you want to "
 "disable storing logs set this option empty, like this::"
 msgstr ""
+"Scrapyのログが格納されるディレクトリです。ログの保存を行いたくない場合、"
+"以下の様にこのオプションに空値を設定してください。"
 
 #: ../../config.rst:75
 msgid "items_dir"
