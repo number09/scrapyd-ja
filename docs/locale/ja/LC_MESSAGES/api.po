@@ -153,6 +153,7 @@ msgid ""
 "to the spider being scheduled"
 msgstr ""
 
+
 #: ../../api.rst:88
 msgid "cancel.json"
 msgstr ""
@@ -218,7 +219,7 @@ msgstr "任意のプロジェクトの保留中、実行中、完了済みジョ
 
 #: ../../api.rst:175
 msgid "``project`` (string, option) - restrict results to project name"
-msgstr "出力結果を指定したプロジェクトのジョブに限定します。"
+msgstr "``project`` (string, 任意) - 出力結果を指定したプロジェクトのジョブに限定します。"
 
 #: ../../api.rst:208
 msgid ""
