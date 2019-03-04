@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../config.rst:4
 msgid "Configuration file"
-msgstr ""
+msgstr "設定ファイル"
 
 #: ../../config.rst:6
 msgid ""
@@ -27,7 +27,7 @@ msgid ""
 "parses them in order with the latest one taking more priority:"
 msgstr ""
 "Scrapydは以下の場所から設定ファイルを探します。"
-"最新の設定ファイルを優先的に適用します。"
+"最後の設定ファイルを優先的に適用します。"
 
 #: ../../config.rst:9
 msgid "``/etc/scrapyd/scrapyd.conf`` (Unix)"
@@ -163,6 +163,13 @@ msgid ""
 "exporter. Setting it to non-empty results in storing scraped item feeds "
 "to the specified directory by overriding the scrapy setting ``FEED_URI``."
 msgstr ""
+"Scrapyのアイテムが格納されるディレクトリです。"
+"通常データベースかフィードエクスポーターが使用されることを想定している為、"
+"このオプションはデフォルトで無効にされています。"
+"空でない値を設定すると、Scrapyの設定 ``FEED_URI`` を上書きし、"
+"指定したディレクトリに収集したアイテムフィードを格納します。"
+
+
 
 #: ../../config.rst:88
 msgid "jobs_to_keep"
@@ -173,10 +180,12 @@ msgid ""
 "The number of finished jobs to keep per spider. Defaults to ``5``. This "
 "refers to logs and items."
 msgstr ""
+"spider毎の、完了したジョブを保持する数です。デフォルトは ``5`` です。"
+"保存する内容とは、ログとアイテムの事を指しています。"
 
 #: ../../config.rst:96
 msgid "This setting was named ``logs_to_keep`` in previous versions."
-msgstr ""
+msgstr "以前のバージョンでは、この設定項目は ``logs_to_keep`` という名前でした。"
 
 #: ../../config.rst:101
 msgid "finished_to_keep"
@@ -188,6 +197,9 @@ msgid ""
 "``100``. This only reflects on the website /jobs endpoint and relevant "
 "json webservices."
 msgstr ""
+"ランチャーに保持する完了プロセスの数です。デフォルトは ``100`` です。"
+"これはウェブサイトの /jobs エンドポイントと、関連するjson ウェブサービスにのみ"
+"反映されます。"
 
 #: ../../config.rst:110
 msgid "poll_interval"
@@ -198,6 +210,9 @@ msgid ""
 "The interval used to poll queues, in seconds. Defaults to ``5.0``. Can be"
 " a float, such as ``0.2``"
 msgstr ""
+"キューをポーリングする間隔です。秒で指定します。デフォルトは ``5.0`` です。"
+"``0.2`` のような小数を使用できます。"
+
 
 #: ../../config.rst:117
 msgid "runner"
@@ -209,6 +224,8 @@ msgid ""
 "customize the Scrapy processes launched from Scrapyd by using your own "
 "module."
 msgstr ""
+"サブプロセスを起動するのに使用されるモジュールです。"
+"Scrapydから起動されたScrapyプロセスは、任意のモジュールでカスタマイズ出来ます。"
 
 #: ../../config.rst:123
 msgid "application"
@@ -220,10 +237,12 @@ msgid ""
 " be used if you want to extend Scrapyd by adding and removing your own "
 "components and services."
 msgstr ""
+"Twisted アプリケーションを返す関数です。"
+"Scrapydを拡張し、任意のコンポーネントやサービスを追加または削除したい場合に使用できます。"
 
 #: ../../config.rst:129
 msgid "For more info see `Twisted Application Framework`_"
-msgstr ""
+msgstr "詳しい情報は `Twisted Application Framework`_ を参照してください。"
 
 #: ../../config.rst:134
 msgid "webroot"
@@ -236,6 +255,10 @@ msgid ""
 "access to the application's webresources. This setting must provide the "
 "root class of the twisted web resource."
 msgstr ""
+"Scrapydのインターフェースとして使用されるtwistedのウェブ リソースです。"
+"Scrapydは、単純な監視と、アプリケーションのウェブリソースにアクセスするための"
+"インターフェースをウェブサイトで提供しています。"
+"この設定はtwisted ウェブ リソースのルートクラスが設定されるべきです。"
 
 #: ../../config.rst:142
 msgid "node_name"
@@ -246,6 +269,9 @@ msgid ""
 "The node name for each node to something like the display hostname. "
 "Defaults to ``${socket.gethostname()}``."
 msgstr ""
+"表示するホスト名のような、各ノードのノード名です。"
+"デフォルトは ``${socket.gethostname()}`` です。"
+
 
 #: ../../config.rst:151
 msgid "Example configuration file"
@@ -253,5 +279,5 @@ msgstr ""
 
 #: ../../config.rst:153
 msgid "Here is an example configuration file with all the defaults:"
-msgstr ""
+msgstr "全てをデフォルトに設定した設定ファイルの例を示します。"
 
