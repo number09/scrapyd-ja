@@ -111,25 +111,25 @@ msgstr ""
 
 #: ../../api.rst:57
 msgid "Schedule a spider run (also known as a job), returning the job id."
-msgstr "spiderの実行(jobとも呼ばれる)をスケジュールし、job idを返します。"
+msgstr "スパイダーの実行(jobとも呼ばれる)をスケジュールし、job idを返します。"
 
 #: ../../api.rst:63
 msgid "``spider`` (string, required) - the spider name"
-msgstr "``spider`` (string, 必須) - spiderの名前"
+msgstr "``spider`` (string, 必須) - スパイダーの名前"
 
 #: ../../api.rst:64
 msgid ""
 "``setting`` (string, optional) - a Scrapy setting to use when running the"
 " spider"
 msgstr ""
-"``setting`` (string, 任意) - spiderを実行する時に使用するScrapy setting"
+"``setting`` (string, 任意) - スパイダーを実行する時に使用するScrapy設定"
 
 #: ../../api.rst:65
 msgid ""
 "``jobid`` (string, optional) - a job id used to identify the job, "
 "overrides the default generated UUID"
 msgstr ""
-"``jobid`` (string, 任意) - jobを識別するjob id。デフォルトで生成されたUUIDをオーバーライドします。"
+"``jobid`` (string, 任意) - ジョブを識別するジョブ id。デフォルトで生成されたUUIDをオーバーライドします。"
 
 #: ../../api.rst:66
 msgid "``_version`` (string, optional) - the version of the project to use"
@@ -137,14 +137,14 @@ msgstr "``_version`` (string, 任意) - 使用するプロジェクトのバー�
 
 #: ../../api.rst:67
 msgid "any other parameter is passed as spider argument"
-msgstr "その他の引数はspiderの引数として渡されます。"
+msgstr "その他の引数はスパイダーの引数として渡されます。"
 
 #: ../../api.rst:77
 msgid ""
 "Example request passing a spider argument (``arg1``) and a setting "
 "(`DOWNLOAD_DELAY`_)::"
 msgstr ""
-"リクエスト例は、spiderの引数(``arg1``)とsetting (`DOWNLOAD_DELAY`_):: を渡しています。"
+"リクエスト例は、スパイダーの引数(``arg1``)と設定 (`DOWNLOAD_DELAY`_):: を渡しています。"
 
 #: ../../api.rst:82
 msgid ""
@@ -152,6 +152,8 @@ msgid ""
 "keyword arguments as scrapyd sends internally generated spider arguments "
 "to the spider being scheduled"
 msgstr ""
+"Scrapydは内部的に生成されたスパイダー引数を、スケジュールされたスパイダーに送信します。"
+"そのため、Scrapydにスケジュールされたスパイダーは、任意の数のキーワード引数を許容すべきです。"
 
 
 #: ../../api.rst:88
@@ -163,12 +165,12 @@ msgid ""
 "Cancel a spider run (aka. job). If the job is pending, it will be "
 "removed. If the job is running, it will be terminated."
 msgstr ""
-"spiderの実行(jobとも呼ばれる)をキャンセルします。ジョブが保留中の場合、ジョブは削除されます。"
+"スパイダーの実行(ジョブとも呼ばれる)をキャンセルします。ジョブが保留中の場合、ジョブは削除されます。"
 "ジョブが実行中の場合、ジョブは中断されます。"
 
 #: ../../api.rst:99
 msgid "``job`` (string, required) - the job id"
-msgstr "``job`` (string, 必須) job id"
+msgstr "``job`` (string, 必須) ジョブ id"
 
 #: ../../api.rst:110
 msgid "listprojects.json"
@@ -203,7 +205,7 @@ msgid ""
 "Get the list of spiders available in the last (unless overridden) version"
 " of some project."
 msgstr ""
-"任意のプロジェクトの実行可能なspiderの最新バージョン（上書きされていない場合）のリストを取得します。"
+"任意のプロジェクトの実行可能なスパイダーの最新バージョン（上書きされていない場合）のリストを取得します。"
 
 #: ../../api.rst:153
 msgid "``_version`` (string, optional) - the version of the project to examine"
