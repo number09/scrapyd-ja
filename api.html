@@ -1,0 +1,466 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ja" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ja" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>API &mdash; Scrapyd 1.2.0 ドキュメント</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/translations.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="検索" href="search.html" />
+    <link rel="next" title="設定ファイル" href="config.html" />
+    <link rel="prev" title="プロジェクトのデプロイ" href="deploy.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Scrapyd
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.2.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">概要</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">インストール</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deploy.html">プロジェクトのデプロイ</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#daemonstatus-json">daemonstatus.json</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#addversion-json">addversion.json</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#schedule-json">schedule.json</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cancel-json">cancel.json</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#listprojects-json">listprojects.json</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#listversions-json">listversions.json</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#listspiders-json">listspiders.json</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#listjobs-json">listjobs.json</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#delversion-json">delversion.json</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#delproject-json">delproject.json</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="config.html">設定ファイル</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">貢献する</a></li>
+<li class="toctree-l1"><a class="reference internal" href="news.html">Release notes</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Scrapyd</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>API</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/api.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="api">
+<span id="id1"></span><h1>API<a class="headerlink" href="#api" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>以下のセクションでは、Scrapyd JSON APIで使用可能なリソースについて説明します。</p>
+<div class="section" id="daemonstatus-json">
+<h2>daemonstatus.json<a class="headerlink" href="#daemonstatus-json" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>サービスの状態を確認します。</p>
+<ul class="simple">
+<li>サポートされるリクエストメソッド: <code class="docutils literal notranslate"><span class="pre">GET</span></code></li>
+</ul>
+<p>リクエストの例:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">curl</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">6800</span><span class="o">/</span><span class="n">daemonstatus</span><span class="o">.</span><span class="n">json</span>
+</pre></div>
+</div>
+<p>レスポンスの例:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span> <span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;ok&quot;</span><span class="p">,</span> <span class="s2">&quot;running&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span> <span class="s2">&quot;pending&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span> <span class="s2">&quot;finished&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span> <span class="s2">&quot;node_name&quot;</span><span class="p">:</span> <span class="s2">&quot;node-name&quot;</span> <span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="addversion-json">
+<h2>addversion.json<a class="headerlink" href="#addversion-json" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>プロジェクトにバージョンを追加します。プロジェクトが無い場合はプロジェクトを作成します。</p>
+<ul class="simple">
+<li>サポートされるリクエストメソッド: <code class="docutils literal notranslate"><span class="pre">POST</span></code></li>
+<li>引数:<ul>
+<li><code class="docutils literal notranslate"><span class="pre">project</span></code> （string, 必須） - プロジェクト名</li>
+<li><code class="docutils literal notranslate"><span class="pre">version</span></code> （string, 必須） - バージョン名</li>
+<li><code class="docutils literal notranslate"><span class="pre">egg</span></code> (file, 必須) - プロジェクトのコードを含んだPython eggファイル</li>
+</ul>
+</li>
+</ul>
+<p>リクエストの例:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ curl http://localhost:6800/addversion.json -F project=myproject -F version=r23 -F egg=@myproject.egg
+</pre></div>
+</div>
+<p>レスポンスの例:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;ok&quot;</span><span class="p">,</span> <span class="s2">&quot;spiders&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">}</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">注釈</p>
+<p class="last">Scrapydはバージョン番号を解釈する為に <a class="reference external" href="http://epydoc.sourceforge.net/stdlib/distutils.version.LooseVersion-class.html">distutils LooseVersion</a> を使用します。</p>
+</div>
+<p>デフォルトでプロジェクトの最新バージョンが、必要に応じて使用されます。</p>
+<p><a class="reference internal" href="#schedule-json">schedule.json</a> と <a class="reference internal" href="#listspiders-json">listspiders.json</a> は、要求するプロジェクトのバージョンを明示的に指定できます。</p>
+</div>
+<div class="section" id="schedule-json">
+<span id="scrapyd-schedule"></span><h2>schedule.json<a class="headerlink" href="#schedule-json" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>スパイダーの実行(jobとも呼ばれる)をスケジュールし、job idを返します。</p>
+<ul class="simple">
+<li>サポートされるリクエストメソッド: <code class="docutils literal notranslate"><span class="pre">POST</span></code></li>
+<li>引数:<ul>
+<li><code class="docutils literal notranslate"><span class="pre">project</span></code> （string, 必須） - プロジェクト名</li>
+<li><code class="docutils literal notranslate"><span class="pre">spider</span></code> (string, 必須) - スパイダーの名前</li>
+<li><code class="docutils literal notranslate"><span class="pre">setting</span></code> (string, 任意) - スパイダーを実行する時に使用するScrapy設定</li>
+<li><code class="docutils literal notranslate"><span class="pre">jobid</span></code> (string, 任意) - ジョブを識別するジョブ id。デフォルトで生成されたUUIDをオーバーライドします。</li>
+<li><code class="docutils literal notranslate"><span class="pre">_version</span></code> (string, 任意) - 使用するプロジェクトのバージョン</li>
+<li>その他の引数はスパイダーの引数として渡されます。</li>
+</ul>
+</li>
+</ul>
+<p>リクエストの例:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ curl http://localhost:6800/schedule.json -d project=myproject -d spider=somespider
+</pre></div>
+</div>
+<p>レスポンスの例:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;ok&quot;</span><span class="p">,</span> <span class="s2">&quot;jobid&quot;</span><span class="p">:</span> <span class="s2">&quot;6487ec79947edab326d6db28a2d86511e8247444&quot;</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>リクエスト例は、スパイダーの引数(<code class="docutils literal notranslate"><span class="pre">arg1</span></code>)と設定 (<a class="reference external" href="http://doc.scrapy.org/en/latest/topics/settings.html#download-delay">DOWNLOAD_DELAY</a>):: を渡しています。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ curl http://localhost:6800/schedule.json -d project=myproject -d spider=somespider -d setting=DOWNLOAD_DELAY=2 -d arg1=val1
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">注釈</p>
+<p class="last">Scrapydは内部的に生成されたスパイダー引数を、スケジュールされたスパイダーに送信します。そのため、Scrapydにスケジュールされたスパイダーは、任意の数のキーワード引数を許容すべきです。</p>
+</div>
+</div>
+<div class="section" id="cancel-json">
+<span id="id2"></span><h2>cancel.json<a class="headerlink" href="#cancel-json" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="versionadded">
+<p><span class="versionmodified">バージョン 0.15 で追加.</span></p>
+</div>
+<p>スパイダーの実行(ジョブとも呼ばれる)をキャンセルします。ジョブが保留中の場合、ジョブは削除されます。ジョブが実行中の場合、ジョブは中断されます。</p>
+<ul class="simple">
+<li>サポートされるリクエストメソッド: <code class="docutils literal notranslate"><span class="pre">POST</span></code></li>
+<li>引数:<ul>
+<li><code class="docutils literal notranslate"><span class="pre">project</span></code> （string, 必須） - プロジェクト名</li>
+<li><code class="docutils literal notranslate"><span class="pre">job</span></code> (string, 必須) ジョブ id</li>
+</ul>
+</li>
+</ul>
+<p>リクエストの例:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ curl http://localhost:6800/cancel.json -d project=myproject -d job=6487ec79947edab326d6db28a2d86511e8247444
+</pre></div>
+</div>
+<p>レスポンスの例:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;ok&quot;</span><span class="p">,</span> <span class="s2">&quot;prevstate&quot;</span><span class="p">:</span> <span class="s2">&quot;running&quot;</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="listprojects-json">
+<h2>listprojects.json<a class="headerlink" href="#listprojects-json" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>このScrapyサーバにアップロードされたプロジェクトのリストを取得します。</p>
+<ul class="simple">
+<li>サポートされるリクエストメソッド: <code class="docutils literal notranslate"><span class="pre">GET</span></code></li>
+<li>引数: 無し</li>
+</ul>
+<p>リクエストの例:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ curl http://localhost:6800/listprojects.json
+</pre></div>
+</div>
+<p>レスポンスの例:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;ok&quot;</span><span class="p">,</span> <span class="s2">&quot;projects&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;myproject&quot;</span><span class="p">,</span> <span class="s2">&quot;otherproject&quot;</span><span class="p">]}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="listversions-json">
+<h2>listversions.json<a class="headerlink" href="#listversions-json" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>任意のプロジェクトの利用可能なバージョンを取得します。バージョンは現在使用しているバージョンが最後となる順番で返されます。</p>
+<ul class="simple">
+<li>サポートされるリクエストメソッド: <code class="docutils literal notranslate"><span class="pre">GET</span></code></li>
+<li>引数:<ul>
+<li><code class="docutils literal notranslate"><span class="pre">project</span></code> （string, 必須） - プロジェクト名</li>
+</ul>
+</li>
+</ul>
+<p>リクエストの例:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ curl http://localhost:6800/listversions.json?project=myproject
+</pre></div>
+</div>
+<p>レスポンスの例:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;ok&quot;</span><span class="p">,</span> <span class="s2">&quot;versions&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;r99&quot;</span><span class="p">,</span> <span class="s2">&quot;r156&quot;</span><span class="p">]}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="listspiders-json">
+<h2>listspiders.json<a class="headerlink" href="#listspiders-json" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>任意のプロジェクトの実行可能なスパイダーの最新バージョン（上書きされていない場合）のリストを取得します。</p>
+<ul class="simple">
+<li>サポートされるリクエストメソッド: <code class="docutils literal notranslate"><span class="pre">GET</span></code></li>
+<li>引数:<ul>
+<li><code class="docutils literal notranslate"><span class="pre">project</span></code> （string, 必須） - プロジェクト名</li>
+<li><code class="docutils literal notranslate"><span class="pre">_version</span></code> (string, 任意) - 対象プロジェクトのバージョン</li>
+</ul>
+</li>
+</ul>
+<p>リクエストの例:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ curl http://localhost:6800/listspiders.json?project=myproject
+</pre></div>
+</div>
+<p>レスポンスの例:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;ok&quot;</span><span class="p">,</span> <span class="s2">&quot;spiders&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;spider1&quot;</span><span class="p">,</span> <span class="s2">&quot;spider2&quot;</span><span class="p">,</span> <span class="s2">&quot;spider3&quot;</span><span class="p">]}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="listjobs-json">
+<span id="id3"></span><h2>listjobs.json<a class="headerlink" href="#listjobs-json" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="versionadded">
+<p><span class="versionmodified">バージョン 0.15 で追加.</span></p>
+</div>
+<p>任意のプロジェクトの保留中、実行中、完了済みジョブのリストを取得します。</p>
+<ul class="simple">
+<li>サポートされるリクエストメソッド: <code class="docutils literal notranslate"><span class="pre">GET</span></code></li>
+<li>引数:<ul>
+<li><code class="docutils literal notranslate"><span class="pre">project</span></code> (string, 任意) - 出力結果を指定したプロジェクトのジョブに限定します。</li>
+</ul>
+</li>
+</ul>
+<p>リクエストの例:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ curl http://localhost:6800/listjobs.json?project=myproject | python -m json.tool
+</pre></div>
+</div>
+<p>レスポンスの例:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;ok&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;pending&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;project&quot;</span><span class="p">:</span> <span class="s2">&quot;myproject&quot;</span><span class="p">,</span> <span class="s2">&quot;spider&quot;</span><span class="p">:</span> <span class="s2">&quot;spider1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;78391cc0fcaf11e1b0090800272a6d06&quot;</span>
+        <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="s2">&quot;running&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;422e608f9f28cef127b3d5ef93fe9399&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;project&quot;</span><span class="p">:</span> <span class="s2">&quot;myproject&quot;</span><span class="p">,</span> <span class="s2">&quot;spider&quot;</span><span class="p">:</span> <span class="s2">&quot;spider2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;start_time&quot;</span><span class="p">:</span> <span class="s2">&quot;2012-09-12 10:14:03.594664&quot;</span>
+        <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="s2">&quot;finished&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;2f16646cfcaf11e1b0090800272a6d06&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;project&quot;</span><span class="p">:</span> <span class="s2">&quot;myproject&quot;</span><span class="p">,</span> <span class="s2">&quot;spider&quot;</span><span class="p">:</span> <span class="s2">&quot;spider3&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;start_time&quot;</span><span class="p">:</span> <span class="s2">&quot;2012-09-12 10:14:03.594664&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;end_time&quot;</span><span class="p">:</span> <span class="s2">&quot;2012-09-12 10:24:03.594664&quot;</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">注釈</p>
+<p class="last">全てのジョブの情報はメモリに保持され、Scrapydサービスが再起動された時にリセットされます。<a class="reference external" href="https://github.com/scrapy/scrapyd/issues/12">issue 12</a> を参照してください。</p>
+</div>
+</div>
+<div class="section" id="delversion-json">
+<h2>delversion.json<a class="headerlink" href="#delversion-json" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>プロジェクトのバージョンを削除します。指定されたプロジェクトの実行可能なバージョンが無くなる場合、プロジェクトも削除されます。</p>
+<ul class="simple">
+<li>サポートされるリクエストメソッド: <code class="docutils literal notranslate"><span class="pre">POST</span></code></li>
+<li>引数:<ul>
+<li><code class="docutils literal notranslate"><span class="pre">project</span></code> （string, 必須） - プロジェクト名</li>
+<li><code class="docutils literal notranslate"><span class="pre">version</span></code> （string, 必須） - バージョン名</li>
+</ul>
+</li>
+</ul>
+<p>リクエストの例:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ curl http://localhost:6800/delversion.json -d project=myproject -d version=r99
+</pre></div>
+</div>
+<p>レスポンスの例:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;ok&quot;</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="delproject-json">
+<h2>delproject.json<a class="headerlink" href="#delproject-json" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>全てのアップロードされたバージョンを含め、プロジェクトを削除します。</p>
+<ul class="simple">
+<li>サポートされるリクエストメソッド: <code class="docutils literal notranslate"><span class="pre">POST</span></code></li>
+<li>引数:<ul>
+<li><code class="docutils literal notranslate"><span class="pre">project</span></code> （string, 必須） - プロジェクト名</li>
+</ul>
+</li>
+</ul>
+<p>リクエストの例:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ curl http://localhost:6800/delproject.json -d project=myproject
+</pre></div>
+</div>
+<p>レスポンスの例:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;ok&quot;</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="config.html" class="btn btn-neutral float-right" title="設定ファイル" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="deploy.html" class="btn btn-neutral float-left" title="プロジェクトのデプロイ" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2013-2017, Scrapy group
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

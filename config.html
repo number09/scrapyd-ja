@@ -1,0 +1,357 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ja" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ja" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>設定ファイル &mdash; Scrapyd 1.2.0 ドキュメント</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/translations.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="検索" href="search.html" />
+    <link rel="next" title="貢献する" href="contributing.html" />
+    <link rel="prev" title="API" href="api.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Scrapyd
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.2.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">概要</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">インストール</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deploy.html">プロジェクトのデプロイ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">設定ファイル</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#http-port">http_port</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#bind-address">bind_address</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#max-proc">max_proc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#max-proc-per-cpu">max_proc_per_cpu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#debug">debug</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#eggs-dir">eggs_dir</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dbs-dir">dbs_dir</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#logs-dir">logs_dir</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#items-dir">items_dir</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#jobs-to-keep">jobs_to_keep</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#finished-to-keep">finished_to_keep</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#poll-interval">poll_interval</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#runner">runner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#application">application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#webroot">webroot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#node-name">node_name</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#example-configuration-file">Example configuration file</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">貢献する</a></li>
+<li class="toctree-l1"><a class="reference internal" href="news.html">Release notes</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Scrapyd</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>設定ファイル</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/config.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="configuration-file">
+<span id="config"></span><h1>設定ファイル<a class="headerlink" href="#configuration-file" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>Scrapydは以下の場所から設定ファイルを探します。最後の設定ファイルを優先的に適用します。</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">/etc/scrapyd/scrapyd.conf</span></code> (Unix)</li>
+<li><code class="docutils literal notranslate"><span class="pre">c:\scrapyd\scrapyd.conf</span></code> (Windows)</li>
+<li><code class="docutils literal notranslate"><span class="pre">/etc/scrapyd/conf.d/*</span></code> (アルファベット順, Unix)</li>
+<li><code class="docutils literal notranslate"><span class="pre">scrapyd.conf</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">~/.scrapyd.conf</span></code> (ユーザのホームディレクトリ)</li>
+</ul>
+<p>設定ファイルは以下のオプションをサポートします。デフォルト値は <a class="reference internal" href="#config-example"><span class="std std-ref">例</span></a> を参照してください。</p>
+<div class="section" id="http-port">
+<h2>http_port<a class="headerlink" href="#http-port" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>HTTP JSON APIが使用するTCPポートです。 デフォルトは <code class="docutils literal notranslate"><span class="pre">6800</span></code> です。</p>
+</div>
+<div class="section" id="bind-address">
+<h2>bind_address<a class="headerlink" href="#bind-address" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>WEBサイトとjson WEBサービスが使用するIPアドレスです。デフォルトは <code class="docutils literal notranslate"><span class="pre">127.0.0.1</span></code> (localhost) です</p>
+</div>
+<div class="section" id="max-proc">
+<span id="id1"></span><h2>max_proc<a class="headerlink" href="#max-proc" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>同時に実行されるScrapyプロセスの最大数です。未指定もしくは <code class="docutils literal notranslate"><span class="pre">0</span></code> を指定した場合、システムで使用可能なCPU数に <code class="docutils literal notranslate"><span class="pre">max_proc_per_cpu</span></code> の値を掛けた値を使用します。デフォルトは <code class="docutils literal notranslate"><span class="pre">0</span></code> です。</p>
+</div>
+<div class="section" id="max-proc-per-cpu">
+<span id="id2"></span><h2>max_proc_per_cpu<a class="headerlink" href="#max-proc-per-cpu" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>CPUあたりの同時に実行されるScrapyプロセスの最大数です。デフォルトは <code class="docutils literal notranslate"><span class="pre">4</span></code> です。</p>
+</div>
+<div class="section" id="debug">
+<h2>debug<a class="headerlink" href="#debug" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>デバッグモードが有効かどうかを指定します。デフォルトは <code class="docutils literal notranslate"><span class="pre">off</span></code> です。デバッグモードを有効にすると、JSON API呼び出しの処理中にエラーが発生した時に、完全なPythonトレースバックが(プレーンテキストのレスポンスで)返されます。</p>
+</div>
+<div class="section" id="eggs-dir">
+<h2>eggs_dir<a class="headerlink" href="#eggs-dir" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>プロジェクトのeggファイルが格納されるディレクトリです。</p>
+</div>
+<div class="section" id="dbs-dir">
+<h2>dbs_dir<a class="headerlink" href="#dbs-dir" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>プロジェクトのデータベースが格納されるディレクトリです。(スパイダーのキューを含みます)</p>
+</div>
+<div class="section" id="logs-dir">
+<h2>logs_dir<a class="headerlink" href="#logs-dir" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Scrapyのログが格納されるディレクトリです。ログの保存を行いたくない場合、以下の様にこのオプションに空値を設定してください。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">logs_dir</span> <span class="o">=</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="items-dir">
+<span id="id3"></span><h2>items_dir<a class="headerlink" href="#items-dir" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="versionadded">
+<p><span class="versionmodified">バージョン 0.15 で追加.</span></p>
+</div>
+<p>Scrapyのアイテムが格納されるディレクトリです。通常データベースかフィードエクスポーターが使用されることを想定している為、このオプションはデフォルトで無効にされています。空でない値を設定すると、Scrapyの設定 <code class="docutils literal notranslate"><span class="pre">FEED_URI</span></code> を上書きし、指定したディレクトリに収集したアイテムフィードを格納します。</p>
+</div>
+<div class="section" id="jobs-to-keep">
+<span id="id4"></span><h2>jobs_to_keep<a class="headerlink" href="#jobs-to-keep" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="versionadded">
+<p><span class="versionmodified">バージョン 0.15 で追加.</span></p>
+</div>
+<p>spider毎の、完了したジョブを保持する数です。デフォルトは <code class="docutils literal notranslate"><span class="pre">5</span></code> です。保存する内容とは、ログとアイテムの事を指しています。</p>
+<p>以前のバージョンでは、この設定項目は <code class="docutils literal notranslate"><span class="pre">logs_to_keep</span></code> という名前でした。</p>
+</div>
+<div class="section" id="finished-to-keep">
+<span id="id5"></span><h2>finished_to_keep<a class="headerlink" href="#finished-to-keep" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="versionadded">
+<p><span class="versionmodified">バージョン 0.14 で追加.</span></p>
+</div>
+<p>ランチャーに保持する完了プロセスの数です。デフォルトは <code class="docutils literal notranslate"><span class="pre">100</span></code> です。これはウェブサイトの /jobs エンドポイントと、関連するjson ウェブサービスにのみ反映されます。</p>
+</div>
+<div class="section" id="poll-interval">
+<h2>poll_interval<a class="headerlink" href="#poll-interval" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>キューをポーリングする間隔です。秒で指定します。デフォルトは <code class="docutils literal notranslate"><span class="pre">5.0</span></code> です。<code class="docutils literal notranslate"><span class="pre">0.2</span></code> のような小数を使用できます。</p>
+</div>
+<div class="section" id="runner">
+<h2>runner<a class="headerlink" href="#runner" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>サブプロセスを起動するのに使用されるモジュールです。Scrapydから起動されたScrapyプロセスは、任意のモジュールでカスタマイズ出来ます。</p>
+</div>
+<div class="section" id="application">
+<h2>application<a class="headerlink" href="#application" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Twisted アプリケーションを返す関数です。Scrapydを拡張し、任意のコンポーネントやサービスを追加または削除したい場合に使用できます。</p>
+<p>詳しい情報は <a class="reference external" href="http://twistedmatrix.com/documents/current/core/howto/application.html">Twisted Application Framework</a> を参照してください。</p>
+</div>
+<div class="section" id="webroot">
+<span id="id6"></span><h2>webroot<a class="headerlink" href="#webroot" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Scrapydのインターフェースとして使用されるtwistedのウェブ リソースです。Scrapydは、単純な監視と、アプリケーションのウェブリソースにアクセスするためのインターフェースをウェブサイトで提供しています。この設定はtwisted ウェブ リソースのルートクラスが設定されるべきです。</p>
+</div>
+<div class="section" id="node-name">
+<h2>node_name<a class="headerlink" href="#node-name" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="versionadded">
+<p><span class="versionmodified">バージョン 1.1 で追加.</span></p>
+</div>
+<p>表示するホスト名のような、各ノードのノード名です。デフォルトは <code class="docutils literal notranslate"><span class="pre">${socket.gethostname()}</span></code> です。</p>
+</div>
+<div class="section" id="example-configuration-file">
+<span id="config-example"></span><h2>Example configuration file<a class="headerlink" href="#example-configuration-file" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>全てをデフォルトに設定した設定ファイルの例を示します。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">scrapyd</span><span class="p">]</span>
+<span class="n">eggs_dir</span>    <span class="o">=</span> <span class="n">eggs</span>
+<span class="n">logs_dir</span>    <span class="o">=</span> <span class="n">logs</span>
+<span class="n">items_dir</span>   <span class="o">=</span>
+<span class="n">jobs_to_keep</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">dbs_dir</span>     <span class="o">=</span> <span class="n">dbs</span>
+<span class="n">max_proc</span>    <span class="o">=</span> <span class="mi">0</span>
+<span class="n">max_proc_per_cpu</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">finished_to_keep</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">poll_interval</span> <span class="o">=</span> <span class="mf">5.0</span>
+<span class="n">bind_address</span> <span class="o">=</span> <span class="mf">127.0</span><span class="o">.</span><span class="mf">0.1</span>
+<span class="n">http_port</span>   <span class="o">=</span> <span class="mi">6800</span>
+<span class="n">debug</span>       <span class="o">=</span> <span class="n">off</span>
+<span class="n">runner</span>      <span class="o">=</span> <span class="n">scrapyd</span><span class="o">.</span><span class="n">runner</span>
+<span class="n">application</span> <span class="o">=</span> <span class="n">scrapyd</span><span class="o">.</span><span class="n">app</span><span class="o">.</span><span class="n">application</span>
+<span class="n">launcher</span>    <span class="o">=</span> <span class="n">scrapyd</span><span class="o">.</span><span class="n">launcher</span><span class="o">.</span><span class="n">Launcher</span>
+<span class="n">webroot</span>     <span class="o">=</span> <span class="n">scrapyd</span><span class="o">.</span><span class="n">website</span><span class="o">.</span><span class="n">Root</span>
+
+<span class="p">[</span><span class="n">services</span><span class="p">]</span>
+<span class="n">schedule</span><span class="o">.</span><span class="n">json</span>     <span class="o">=</span> <span class="n">scrapyd</span><span class="o">.</span><span class="n">webservice</span><span class="o">.</span><span class="n">Schedule</span>
+<span class="n">cancel</span><span class="o">.</span><span class="n">json</span>       <span class="o">=</span> <span class="n">scrapyd</span><span class="o">.</span><span class="n">webservice</span><span class="o">.</span><span class="n">Cancel</span>
+<span class="n">addversion</span><span class="o">.</span><span class="n">json</span>   <span class="o">=</span> <span class="n">scrapyd</span><span class="o">.</span><span class="n">webservice</span><span class="o">.</span><span class="n">AddVersion</span>
+<span class="n">listprojects</span><span class="o">.</span><span class="n">json</span> <span class="o">=</span> <span class="n">scrapyd</span><span class="o">.</span><span class="n">webservice</span><span class="o">.</span><span class="n">ListProjects</span>
+<span class="n">listversions</span><span class="o">.</span><span class="n">json</span> <span class="o">=</span> <span class="n">scrapyd</span><span class="o">.</span><span class="n">webservice</span><span class="o">.</span><span class="n">ListVersions</span>
+<span class="n">listspiders</span><span class="o">.</span><span class="n">json</span>  <span class="o">=</span> <span class="n">scrapyd</span><span class="o">.</span><span class="n">webservice</span><span class="o">.</span><span class="n">ListSpiders</span>
+<span class="n">delproject</span><span class="o">.</span><span class="n">json</span>   <span class="o">=</span> <span class="n">scrapyd</span><span class="o">.</span><span class="n">webservice</span><span class="o">.</span><span class="n">DeleteProject</span>
+<span class="n">delversion</span><span class="o">.</span><span class="n">json</span>   <span class="o">=</span> <span class="n">scrapyd</span><span class="o">.</span><span class="n">webservice</span><span class="o">.</span><span class="n">DeleteVersion</span>
+<span class="n">listjobs</span><span class="o">.</span><span class="n">json</span>     <span class="o">=</span> <span class="n">scrapyd</span><span class="o">.</span><span class="n">webservice</span><span class="o">.</span><span class="n">ListJobs</span>
+<span class="n">daemonstatus</span><span class="o">.</span><span class="n">json</span> <span class="o">=</span> <span class="n">scrapyd</span><span class="o">.</span><span class="n">webservice</span><span class="o">.</span><span class="n">DaemonStatus</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="contributing.html" class="btn btn-neutral float-right" title="貢献する" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="api.html" class="btn btn-neutral float-left" title="API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2013-2017, Scrapy group
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,256 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ja" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ja" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>概要 &mdash; Scrapyd 1.2.0 ドキュメント</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/translations.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="検索" href="search.html" />
+    <link rel="next" title="インストール" href="install.html" />
+    <link rel="prev" title="Scrapyd" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Scrapyd
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.2.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">概要</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#projects-and-versions">プロジェクトとバージョン</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-scrapyd-works">どのようにScrapydが動作するか</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#starting-scrapyd">Scrapydを開始する</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#scheduling-a-spider-run">スパイダーの実行をスケジューリングする</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#web-interface">Webインターフェース</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">インストール</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deploy.html">プロジェクトのデプロイ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="config.html">設定ファイル</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">貢献する</a></li>
+<li class="toctree-l1"><a class="reference internal" href="news.html">Release notes</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Scrapyd</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>概要</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/overview.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="overview">
+<h1>概要<a class="headerlink" href="#overview" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="section" id="projects-and-versions">
+<h2>プロジェクトとバージョン<a class="headerlink" href="#projects-and-versions" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Scrapydは複数のプロジェクトを管理することができ、各プロジェクトはアップロードされた複数のバージョンを持つことができますが、新しいスパイダーを起動する際には、最新のバージョンのみが使用されます。</p>
+<p>バージョン名の一般的（かつ便利）な慣習は、あなたのScrapyプロジェクトのコードを追跡するのに使用している、バージョン管理ツールのリビジョン番号です。例: <code class="docutils literal notranslate"><span class="pre">r23</span></code>  バージョンはアルファベット順で比較されるのではなく、( <a class="reference external" href="http://docs.python.org/library/distutils.html">distutils</a> が使用するのと同じ）よりスマートなアルゴリズムを使用する為、例えば <code class="docutils literal notranslate"><span class="pre">r10</span></code> は <code class="docutils literal notranslate"><span class="pre">r9</span></code> より大きくなります。</p>
+</div>
+<div class="section" id="how-scrapyd-works">
+<h2>どのようにScrapydが動作するか<a class="headerlink" href="#how-scrapyd-works" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Scrapydは（一般的にデーモンとして実行する）アプリケーションであり、スパイダーの実行要求を待ち受け、実行するプロセスを生成します。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">scrapy</span> <span class="n">crawl</span> <span class="n">myspider</span>
+</pre></div>
+</div>
+<p>また、Scrapydは、処理を行うためにできるだけ多くのプロセスを開始し、<a class="reference internal" href="config.html#max-proc"><span class="std std-ref">max_proc</span></a> と <a class="reference internal" href="config.html#max-proc-per-cpu"><span class="std std-ref">max_proc_per_cpu</span></a> オプションで指定された固定数のスロットに割り当てを行い、複数のプロセスを並列に実行します。</p>
+<p>プロセスの割り当てや管理の他、Scrapydは(egg形式の)新しいプロジェクト・バージョンをアップロードしたり、スパイダーをスケジューリングするための <a class="reference internal" href="api.html#api"><span class="std std-ref">JSON web service</span></a> を提供します。この機能はオプションであり、もしScrapydをカスタマイズしたい場合、この機能は無効化することが出来ます。もしScrapydを実装している <a class="reference external" href="http://twistedmatrix.com/documents/current/core/howto/application.html">Twisted Application Framework</a> にあなたが精通しているのであれば、コンポーネントはプラガブルであり変更可能です。</p>
+<p>バージョン0.11より、Scrapydは最小限の <a class="reference internal" href="#webui"><span class="std std-ref">web interface</span></a> も提供しています。</p>
+</div>
+<div class="section" id="starting-scrapyd">
+<h2>Scrapydを開始する<a class="headerlink" href="#starting-scrapyd" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>サービスを開始するには、Scrapyディストリビューションで提供されている <code class="docutils literal notranslate"><span class="pre">scrapyd</span></code> コマンドを使用します。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">scrapyd</span>
+</pre></div>
+</div>
+<p>これでScrapydが起動します。</p>
+</div>
+<div class="section" id="scheduling-a-spider-run">
+<h2>スパイダーの実行をスケジューリングする<a class="headerlink" href="#scheduling-a-spider-run" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>スパイダーの実行をスケジューリングします。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ curl http://localhost:6800/schedule.json -d project=myproject -d spider=spider2
+{&quot;status&quot;: &quot;ok&quot;, &quot;jobid&quot;: &quot;26d1b1a6d6f111e0be5c001e648c57f8&quot;}
+</pre></div>
+</div>
+<p>より多くの使用可能なリソースについては、 <a class="reference internal" href="api.html#api"><span class="std std-ref">API</span></a> を参照してください。</p>
+</div>
+<div class="section" id="web-interface">
+<span id="webui"></span><h2>Webインターフェース<a class="headerlink" href="#web-interface" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Scrapydには(プロセスの実行やアクセスログを監視するための)最小限のwebインターフェースが付属しており、<a class="reference external" href="http://localhost:6800/">http://localhost:6800/</a> からアクセスすることができます。</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="install.html" class="btn btn-neutral float-right" title="インストール" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="Scrapyd" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2013-2017, Scrapy group
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
