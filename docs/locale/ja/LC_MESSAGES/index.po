@@ -27,9 +27,9 @@ msgid ""
 "enables you to deploy (upload) your projects and control their spiders "
 "using a JSON API."
 msgstr ""
-"Scrapydは、Scrapy spiderをデプロイし実行する為のアプリケーションです。"
+"Scrapydは、Scrapyスパイダーをデプロイし実行する為のアプリケーションです。"
 "プロジェクトをデプロイ（アップロード）することを可能にし、JSON APIを使用して"
-"デプロイしたspiderを操作することができます。"
+"デプロイしたスパイダーを操作することができます。"
 
 #: ../../index.rst:9
 msgid "Contents"
