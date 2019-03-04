@@ -32,7 +32,7 @@ msgid ""
 " spiders."
 msgstr ""
 "Scrapydは複数のプロジェクトを管理することができ、各プロジェクトはアップロードされた複数のバージョンを持つことができますが、"
-"新しいspiderを起動する際には、最新のもののみが使用されます。"
+"新しいスパイダーを起動する際には、最新のバージョンのみが使用されます。"
 
 
 #: ../../overview.rst:12
@@ -59,7 +59,7 @@ msgid ""
 "basically executes::"
 msgstr ""
 "Scrapydは（一般的にデーモンとして実行する）アプリケーションであり、"
-"spiderの実行要求を待ち受け、実行するプロセスを生成します。"
+"スパイダーの実行要求を待ち受け、実行するプロセスを生成します。"
 
 #: ../../overview.rst:27
 msgid ""
@@ -82,7 +82,7 @@ msgid ""
 "Framework`_ which Scrapyd is implemented in."
 msgstr ""
 "プロセスの割り当てや管理の他、Scrapydは(egg形式の)新しいプロジェクト・バージョンを"
-"アップロードしたり、spiderをスケジューリングするための :ref:`JSON web service <api>` を"
+"アップロードしたり、スパイダーをスケジューリングするための :ref:`JSON web service <api>` を"
 "提供します。"
 "この機能はオプションであり、もしScrapydをカスタマイズしたい場合、この機能は無効化することが出来ます。"
 "もしScrapydを実装している `Twisted Application Framework`_ にあなたが精通しているのであれば、"
@@ -113,12 +113,12 @@ msgstr ""
 
 #: ../../overview.rst:52
 msgid "Scheduling a spider run"
-msgstr "spiderの実行をスケジューリングする"
+msgstr "スパイダーの実行をスケジューリングする"
 
 #: ../../overview.rst:54
 msgid "To schedule a spider run::"
 msgstr ""
-"spiderの実行をスケジューリングします。"
+"スパイダーの実行をスケジューリングします。"
 
 #: ../../overview.rst:59
 msgid "For more resources see: :ref:`api` for more available resources."
