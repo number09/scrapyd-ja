@@ -26,7 +26,7 @@ msgid ""
 "This documents explains how to install and configure Scrapyd, to deploy "
 "and run your Scrapy spiders."
 msgstr ""
-"このドキュメントはScrapy spiderをデプロイし実行するために、Scrapydのインストールと設定方法を説明しています。"
+"このドキュメントはScrapyスパイダーをデプロイし実行するために、Scrapydのインストールと設定方法を説明しています。"
 
 #: ../../install.rst:10
 msgid "Requirements"
