@@ -19,47 +19,53 @@ msgstr ""
 
 #: ../../contributing.rst:4
 msgid "Contributing"
-msgstr ""
+msgstr "貢献する"
 
 #: ../../contributing.rst:8
 msgid ""
 "Read through the `Scrapy Contribution Docs`_ for tips relating to writing"
 " patches, reporting bugs, and project coding style"
 msgstr ""
+"パッチの作成、バグの報告、プロジェクトのコーディングスタイルについてのヒントは、"
+" `Scrapy Contribution Docs`_ を読んでください。"
 
 #: ../../contributing.rst:10
 msgid "These docs describe how to setup and contribute to Scrapyd."
-msgstr ""
+msgstr "これらのドキュメントは、セットアップ方法とScrapydに貢献する方法を説明しています。"
 
 #: ../../contributing.rst:13
 msgid "Reporting Issues & Bugs"
-msgstr ""
+msgstr "問題とバグの報告"
 
 #: ../../contributing.rst:15
 msgid ""
 "Issues should be reported to the Scrapyd project `issue tracker`_ on "
 "GitHub"
 msgstr ""
+"問題は、GitHub上にあるScrapyプロジェクトの `issue tracker`_ で報告されるべきです。"
 
 #: ../../contributing.rst:18
 msgid "Tests"
-msgstr ""
+msgstr "テスト"
 
 #: ../../contributing.rst:20
 msgid ""
 "Tests are implemented using the `Twisted unit-testing framework`_. "
 "Scrapyd uses ``trial`` as the test running application."
 msgstr ""
+"テストは、 `Twisted unit-testing framework`_ を用いて実装されています。"
+"Scrapydはアプリケーション実行のテストに ``trial`` を使用しています。"
 
 #: ../../contributing.rst:23
 msgid "Running tests"
-msgstr ""
+msgstr "テストの実行"
 
 #: ../../contributing.rst:25
 msgid ""
 "To run all tests go to the root directory of the Scrapyd source code and "
 "run:"
 msgstr ""
+"全てのテストを実行するに、Scrapydソースコードのルートディレクトリに移動し、以下を実行します。"
 
 #: ../../contributing.rst:27
 msgid "``trial scrapyd``"
@@ -68,6 +74,7 @@ msgstr ""
 #: ../../contributing.rst:29
 msgid "To run a specific test (say ``tests/test_poller.py``) use:"
 msgstr ""
+"特定のテストを実行する場合(例えば ``tests/test_poller.py``)、以下を使用します。"
 
 #: ../../contributing.rst:31
 msgid "``trial scrapyd.tests.test_poller``"
@@ -75,7 +82,7 @@ msgstr ""
 
 #: ../../contributing.rst:35
 msgid "Writing tests"
-msgstr ""
+msgstr "テストを書く"
 
 #: ../../contributing.rst:37
 msgid ""
@@ -83,6 +90,9 @@ msgid ""
 " test case to check that it works as expected, so please include tests "
 "for your patches if you want them to get accepted sooner."
 msgstr ""
+"全ての機能(新機能やバグの修正を含む)には、期待通りに動作することを確認するためのテストケースが"
+"含まれるべきです。ですから、パッチができるだけ早く受けいれられるために、"
+"パッチにはテストを含めてください。"
 
 #: ../../contributing.rst:41
 msgid ""
@@ -90,20 +100,25 @@ msgid ""
 "directory. Their module name typically resembles the full path of the "
 "module they're testing. For example, the scheduler code is in::"
 msgstr ""
+"Scrapydは `scrapyd/tests`_　ディレクトリにあるユニットテストを使用します。"
+"通常、テストモジュールの名前はテスト対象モジュールの完全なパスに似ています。"
+"例えばスケジューラのコードは以下です。"
 
 #: ../../contributing.rst:47
 msgid "And their unit-tests are in::"
-msgstr ""
+msgstr "そしてそのユニットテストは以下です。"
 
 #: ../../contributing.rst:52
 msgid "Installing Locally"
-msgstr ""
+msgstr "ローカルへインストールする"
 
 #: ../../contributing.rst:54
 msgid ""
 "To install a locally edited version of Scrapyd onto the system to use and"
 " test, inside the project root run:"
 msgstr ""
+"ローカルで編集されたバージョンのScrapydを実行する、またはテストする目的でシステムにインストールするには、"
+"プロジェクトのルートで以下を実行します。"
 
 #: ../../contributing.rst:56
 msgid "``pip install -e .``"
