@@ -101,7 +101,7 @@ msgid ""
 "The maximum number of concurrent Scrapy process that will be started per "
 "cpu. Defaults to ``4``."
 msgstr ""
-"CPU辺りの同時に実行されるScrapyプロセスの最大数です。"
+"CPUあたりの同時に実行されるScrapyプロセスの最大数です。"
 "デフォルトは ``4`` です。"
 
 #: ../../config.rst:47
@@ -126,7 +126,7 @@ msgstr ""
 
 #: ../../config.rst:56
 msgid "The directory where the project eggs will be stored."
-msgstr "プロジェクtのeggファイルが格納されるディレクトリです。"
+msgstr "プロジェクトのeggファイルが格納されるディレクトリです。"
 
 #: ../../config.rst:59
 msgid "dbs_dir"
@@ -138,7 +138,7 @@ msgid ""
 "the spider queues)."
 msgstr ""
 "プロジェクトのデータベースが格納されるディレクトリです。"
-"(spiderのキューを含みます)"
+"(スパイダーのキューを含みます)"
 
 #: ../../config.rst:65
 msgid "logs_dir"
